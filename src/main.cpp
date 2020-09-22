@@ -18,8 +18,8 @@ using namespace vex;
 
 // A global instance of competition
 competition Competition;
+asdfsad
 
-// vex::brain Brain;
 // define your global instances of motors and other devices here
 vex::motor LFront = vex::motor(vex::PORT1);
 vex::motor RFront = vex::motor(vex::PORT10);
