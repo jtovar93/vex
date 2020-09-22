@@ -89,6 +89,16 @@ void usercontrol(void) {
     RFront.spin(vex::directionType::rev, Controller1.Axis3.position(), vex::velocityUnits::pct);
     RBack.spin(vex::directionType::rev, Controller1.Axis3.position(), vex::velocityUnits::pct);
 
+    // //detecting buttonA presses
+    while(Controller1.ButtonA.pressing()){
+      Brain.Screen.print("Button A is pressed ");
+      Controller1.rumble(".-");
+      Brain.Screen.newLine();
+    }
+    if(!Controller1.ButtonA.pressing()){
+      Brain.Screen.clearScreen();
+    }
+
     //remote only has 100 distinct values
     if(Controller1.Axis3.position() != 0){
       Brain.Screen.print(Controller1.Axis3.position());
@@ -97,10 +107,8 @@ void usercontrol(void) {
 
     //this will clear the screen when the joystick is returned to the neutral position
     if(Controller1.Axis3.position() == 0){
-      Brain.Screen.clearScreen();
+      // Brain.Screen.clearScreen();
     }
-
-    Brain.Screen.newLine();
 
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
