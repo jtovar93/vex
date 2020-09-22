@@ -2,7 +2,7 @@
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
 /*    Author:       VEX                                                       */
-/*    Created:      Thu Sep 26 2019                                           */
+/*    Created:      Mon Sep 21 2020                                           */
 /*    Description:  Competition Template                                      */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
@@ -18,7 +18,6 @@ using namespace vex;
 
 // A global instance of competition
 competition Competition;
-asdfsad
 
 // define your global instances of motors and other devices here
 vex::motor LFront = vex::motor(vex::PORT1);
